@@ -1,4 +1,5 @@
 import numpy as np
+
 # from matplotlib import pyplot as plt
 # from sklearn.linear_model import LinearRegression
 #
@@ -68,7 +69,8 @@ import numpy as np
 # print(theta)
 #
 # # Linear Regression using Stochastic Gradient Descent
-# from sklearn.linear_model import SGDRegressor
+from sklearn.linear_model import SGDRegressor
+
 #
 # sgd_r = SGDRegressor(eta0=0.1, penalty=None)
 # sgd_r.fit(X, y.ravel())
@@ -83,7 +85,7 @@ y = 0.5 * X ** 2 + X + 2 + np.random.rand(m, 1)
 # plt.scatter(X, y)
 # plt.show()
 #
-# from sklearn.preprocessing import PolynomialFeatures
+from sklearn.preprocessing import PolynomialFeatures
 #
 # poly_features = PolynomialFeatures(degree=2, include_bias=False)
 # X_poly = poly_features.fit_transform(X)
@@ -95,7 +97,7 @@ y = 0.5 * X ** 2 + X + 2 + np.random.rand(m, 1)
 # lin_reg.fit(X_poly, y)
 # print(lin_reg.intercept_, lin_reg.coef_)
 #
-# from sklearn.metrics import mean_squared_error
+from sklearn.metrics import mean_squared_error
 # from sklearn.model_selection import train_test_split
 #
 #
@@ -118,7 +120,7 @@ y = 0.5 * X ** 2 + X + 2 + np.random.rand(m, 1)
 # lin_reg = LinearRegression()
 # plot_learning_curve(lin_reg, X, y)
 #
-# from sklearn.pipeline import Pipeline
+from sklearn.pipeline import Pipeline
 #
 # polynomial_regression = Pipeline([
 #     ("ploy_features", PolynomialFeatures(degree=2, include_bias=False)),
@@ -148,7 +150,15 @@ y = 0.5 * X ** 2 + X + 2 + np.random.rand(m, 1)
 
 from sklearn.linear_model import Lasso
 
-lasso_reg = Lasso(alpha=0.1) # == SGDRegressor(penalty = "l1")  # Equation 4-11
+lasso_reg = Lasso(alpha=0.1)  # == SGDRegressor(penalty = "l1")  # Equation 4-11
 lasso_reg.fit(X, y)
 predict_3 = lasso_reg.predict([[1.5]])
 print(predict_3)
+
+from sklearn.linear_model import ElasticNet
+
+elastic_reg = ElasticNet(alpha=0.1, l1_ratio=0.5)
+elastic_reg.fit(X, y)
+predict_4 = elastic_reg.predict([[1.5]])
+print(predict_4)
+
