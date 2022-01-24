@@ -69,7 +69,7 @@ import numpy as np
 # print(theta)
 #
 # # Linear Regression using Stochastic Gradient Descent
-from sklearn.linear_model import SGDRegressor
+# from sklearn.linear_model import SGDRegressor
 
 #
 # sgd_r = SGDRegressor(eta0=0.1, penalty=None)
@@ -85,7 +85,7 @@ y = 0.5 * X ** 2 + X + 2 + np.random.rand(m, 1)
 # plt.scatter(X, y)
 # plt.show()
 #
-from sklearn.preprocessing import PolynomialFeatures
+# from sklearn.preprocessing import PolynomialFeatures
 #
 # poly_features = PolynomialFeatures(degree=2, include_bias=False)
 # X_poly = poly_features.fit_transform(X)
@@ -97,7 +97,7 @@ from sklearn.preprocessing import PolynomialFeatures
 # lin_reg.fit(X_poly, y)
 # print(lin_reg.intercept_, lin_reg.coef_)
 #
-from sklearn.metrics import mean_squared_error
+# from sklearn.metrics import mean_squared_error
 # from sklearn.model_selection import train_test_split
 #
 #
@@ -120,7 +120,7 @@ from sklearn.metrics import mean_squared_error
 # lin_reg = LinearRegression()
 # plot_learning_curve(lin_reg, X, y)
 #
-from sklearn.pipeline import Pipeline
+# from sklearn.pipeline import Pipeline
 #
 # polynomial_regression = Pipeline([
 #     ("ploy_features", PolynomialFeatures(degree=2, include_bias=False)),
